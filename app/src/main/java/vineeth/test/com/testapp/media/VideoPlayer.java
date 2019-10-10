@@ -3,10 +3,12 @@ package vineeth.test.com.testapp.media;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.VideoView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import vineeth.test.com.testapp.R;
 
 public class VideoPlayer extends AppCompatActivity {
@@ -28,6 +30,7 @@ public class VideoPlayer extends AppCompatActivity {
 
     public void onActivityResult(int requestCode,int result,Intent intent)
     {
+        super.onActivityResult(requestCode,result,intent);
         if(result==RESULT_OK)
         {
             switch (requestCode)
@@ -39,4 +42,6 @@ public class VideoPlayer extends AppCompatActivity {
             }
         }
     }
+
+
 }

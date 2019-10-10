@@ -4,6 +4,16 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera2.full" />
 
     <application
             android:allowBackup="true"
@@ -27,13 +37,22 @@
 
         <activity android:name=".MainActivity" android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".TestAlarmMain" />
+
         <activity android:name=".storage.StorageMain" />
+        <activity android:name=".storage.FOSExample" />
+        <activity android:name=".storage.FISExample" />
+        <activity android:name=".storage.FIOSCopyImage" />
+        <activity android:name=".storage.BIOSCopyImage" />
 
         <activity android:name=".RedirectActivity" />
 
         <activity android:name=".media.MediaPlayerActivity" />
         <activity android:name=".media.VideoPlayer" android:screenOrientation="fullUser" />
         <activity android:name=".media.MediaRecorderActivity" />
+        <activity android:name=".media.CameraMainActivity" />
+        <activity android:name=".media.ExoPlayerExample" />
+        <activity android:name=".media.ExoPlayerDashExample" />
+        <activity android:name=".storage.PIOSExample" />
 
 
         <service android:name=".service_example.TestService" />
@@ -53,6 +72,69 @@
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
         </receiver>
+
+        <provider android:authorities="vineeth.test.com.testapp.provider" android:name="androidx.core.content.FileProvider"
+                  android:exported="false"
+                  android:grantUriPermissions="true" >
+
+        <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provide_paths" />
+        </provider>
+
+        <activity android:name=".sensors.AccelometerSesorEx" />
+
+        <activity android:name=".canvas.CanvasExample" />
+
+        <activity android:name=".camera_api.CameraApiExample"
+        android:screenOrientation="landscape"/>
+
+        <activity android:name=".camera_api.Camera2ApiExample" />
+        <service android:name=".camera_api.Camera2ApiService"/>
+
+        <activity android:name=".HandlerTest" />
+
+        <activity android:name=".speech_to_text.SpeechRecognizerMainActivity" />
+        <service android:name=".speech_to_text.SpeechRecgService" />
+
+        <!-- socket programming example -->
+        <activity android:name=".socket_prog.ServerClass" />
+        <activity android:name=".socket_prog.ClientClass" />
+
+        <!-- material design -->
+        <activity android:name=".material_design_ex.FloatingActionButtonEx" />
+
+        <activity android:name=".material_design_ex.tab_ex.TabLayoutExMain" />
+
+        <activity android:name=".material_design_ex.CollapsableToolBar" />
+
+        <activity android:name=".inheritance.Child" />
+        <activity android:name=".inheritance.Parent" />
+
+        <activity android:name=".material_design_ex.bottom_sheets.PersistantBottomSheetsEx" />
+
+        <activity android:name=".drawable_ex.DrawableEx" />
+
+        <activity android:name=".material_design_ex.tab_ex.BottomNavigationViewEx"
+                android:supportsPictureInPicture="true" >
+            <layout android:defaultHeight="500dp"
+                    android:defaultWidth="600dp"
+                    android:gravity="top|end"
+                    android:minHeight="100dp"
+                    android:minWidth="100dp" />
+        </activity>
+
+        <activity android:name=".data_binding.DisplayUserDetails" />
+
+       <activity android:name=".retro_fit_ex.DisplayPhotos" />
+
+      <activity android:name=".TestServiceMain" />
+
+        <activity android:name=".MainFragment" />
+        <activity android:name=".kt_example.FirstKotlin" />
+        <activity android:name=".kt_example.KotlinMainActivity" />
+
+        <activity android:name=".room_db_ex.UserActivity" />
 
     </application>
 

@@ -6,18 +6,20 @@ import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.SystemClock;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.Toast;
-import vineeth.test.com.testapp.R;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.io.File;
 import java.io.IOException;
+
+import vineeth.test.com.testapp.R;
 
 
 
@@ -57,7 +59,6 @@ public class MediaRecorderActivity extends AppCompatActivity {
                     File saveFile = getSaveFile();
                     Log.d("MediaRecord", "Save file location is " + saveFile.getAbsolutePath());
                     mediaRecorder.setOutputFile(saveFile.getAbsolutePath());
-
                     mediaRecorder.prepare();
                     mediaRecorder.start();
 

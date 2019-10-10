@@ -7,11 +7,13 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
-import android.support.v4.app.NotificationCompat;
-import vineeth.test.com.testapp.R;
+
+import androidx.core.app.NotificationCompat;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import vineeth.test.com.testapp.R;
 
 public class TestService extends Service {
 

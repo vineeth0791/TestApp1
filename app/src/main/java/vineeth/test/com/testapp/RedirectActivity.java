@@ -1,10 +1,11 @@
 package vineeth.test.com.testapp;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class RedirectActivity extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class RedirectActivity extends AppCompatActivity {
 
     public void onCreate(Bundle savedInstanceState)
     {

@@ -2,11 +2,13 @@ package vineeth.test.com.testapp.tts;
 
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import vineeth.test.com.testapp.R;
 
 public class TextToSpeechMain extends AppCompatActivity implements TextToSpeech.OnInitListener {

@@ -4,10 +4,6 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -16,15 +12,30 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final int permission=1;
+    private String string1;
+    private String string2;
+
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         Log.d("test","Inside on create");
         setContentView(R.layout.tool_bar_layout);
+        string1="string";
+        string2="string";
+        Log.d("MainActivity","String1 is before"+string1+"refer"+string1.hashCode());
+        Log.d("MainActivity","String2 is before"+string2+"refer"+string2.hashCode());
+        string1 = string1.concat(" string1");
+        Log.d("MainActivity","String1 is after"+string1+string1.hashCode());
+        Log.d("MainActivity","String2 is after"+string2+string2.hashCode());
+
        /* final Button redirect=findViewById(R.id.redirect);
         redirect.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         {
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_PHONE_STATE},permission);
         }
+
+
     }
 
     public void onStart()

@@ -5,13 +5,15 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import vineeth.test.com.testapp.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
+
+import vineeth.test.com.testapp.R;
 
 public class MediaPlayerActivity extends AppCompatActivity {
 

@@ -1,15 +1,39 @@
 package vineeth.test.com.testapp.inheritance;
 
-import android.app.Activity;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
-public class Parent  extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
 
-    private static int a=10;
+public class Parent  extends AppCompatActivity {
 
+    int a=10;
+    public static int variable = 1;
+    Context context;
+    public Parent()
+    {
+
+    }
+    public Parent(int va)
+    {
+
+    }
     private final void show()
     {
         Toast.makeText(this,"Parent",Toast.LENGTH_SHORT).show();
+    }
+
+    public void onCreate(Bundle savedInstance)
+    {
+        super.onCreate(savedInstance);
+    }
+
+    public void method()
+    {
+       Log.d("Inheritance","Parent class method");
     }
 
 }

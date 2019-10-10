@@ -5,15 +5,19 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import vineeth.test.com.testapp.alarm_example.AlarmReceiver;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import vineeth.test.com.testapp.alarm_example.AlarmReceiver;
+
+;
 
 public class TestAlarmMain extends AppCompatActivity {
 
