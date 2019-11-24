@@ -16,6 +16,7 @@ public class Fragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle values)
     {
         Log.d("Fragment2","Inside Fragment2 on create view");
+        setRetainInstance(true);
         return inflater.inflate(R.layout.fragment2,parent,false);
     }
 

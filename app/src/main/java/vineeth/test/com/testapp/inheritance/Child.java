@@ -11,9 +11,13 @@ public class Child extends Parent {
       System.out.print("a is "+a);
   }
 
-  public void Child(int test,int test2)
+  public Child()
   {
 
+  }
+  public  Child(int test,int test2)
+  {
+    super(test,test2);
   }
 
     public void method()
@@ -32,13 +36,18 @@ public class Child extends Parent {
   {
       super.onCreate(saved);
       context=Child.this;
-      Parent parent = new Child();
+      Parent parent = new Child(1,2);
       parent.method();
 
-      Child child = new Child();
+      Child child = new Child(1,2);
       child.method();
+
       Log.d("Inheritance","method varible"+parent.a);
       Log.d("Inheritance","method varible"+parent.variable);
+
+      testInterface testInterface = new TestInterfaceClass();
+      testInterface.testMethod();
+
   }
 
 }

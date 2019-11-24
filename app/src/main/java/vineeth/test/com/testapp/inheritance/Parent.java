@@ -13,11 +13,12 @@ public class Parent  extends AppCompatActivity {
     int a=10;
     public static int variable = 1;
     Context context;
+
     public Parent()
     {
 
     }
-    public Parent(int va)
+    public Parent(int va,int va2)
     {
 
     }

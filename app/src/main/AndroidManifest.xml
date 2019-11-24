@@ -133,8 +133,8 @@
         <activity android:name=".MainFragment" />
         <activity android:name=".kt_example.FirstKotlin" />
         <activity android:name=".kt_example.KotlinMainActivity" />
-
         <activity android:name=".room_db_ex.UserActivity" />
+        <activity android:name=".retro_fit_ex.campaign_ex.CampaignsMainActivity" />
 
     </application>
 

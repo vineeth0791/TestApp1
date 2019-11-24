@@ -67,6 +67,7 @@ public class PersistantBottomSheetsEx extends AppCompatActivity {
     {
         BottomSheetDialog bsd = new BottomSheetDialog(context);
         bsd.setContentView(R.layout.persistant_bottom_sheet);
+
         bsd.show();
     }
 
